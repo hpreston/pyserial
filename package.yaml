@@ -1,0 +1,33 @@
+descriptor-schema-version: "2.0"
+ 
+info:
+  name: PySBOT
+  description: "Writes collected sensor data to log files"
+  version: "1.5"
+  author-link: "http://www.cisco.com"
+  author-name: "Cisco Systems"
+ 
+app:
+  # Indicate app type (vm, paas, lxc etc.,)
+  type: paas
+ 
+  resources:
+    profile: small
+
+    network:
+      - 
+        interface-name: eth0
+        ports: 
+            tcp: [6000]
+    devices:
+      -
+        type: serial
+        label: HOST_DEV1
+        usage: This is monitoring sensors 
+
+  # Specify runtime and startup
+  startup:
+    runtime: python 
+    runtime-version: 2.7.3
+    target: main.py
+
