@@ -44,7 +44,7 @@ class SerialThread(threading.Thread):
     def run(self):
         serial_dev = os.getenv("HOST_DEV1")
         if serial_dev is None:
-            serial_dev="/dev/ttyS1"
+            serial_dev="/dev/tty.usbserial"
 
         sdev = serial.Serial(port=serial_dev, baudrate=9600) 
         sdev.bytesize = serial.EIGHTBITS #number of bits per bytes

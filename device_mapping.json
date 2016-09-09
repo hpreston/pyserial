@@ -5,6 +5,6 @@
 		"memory": "50",
 		"disk": "100",
 		"network": [{"interface-name": "eth0", "network-name": "iox-bridge0"}],
-		"devices": [{"type": "serial", "label": "HOST_DEV1", "device-id": "/dev/ttyS1"}]
+		"devices": [{"type": "serial", "label": "HOST_DEV1", "device-id": "/dev/cpts0"}]
 	}
 }
